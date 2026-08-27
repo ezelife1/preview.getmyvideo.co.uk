@@ -1,16 +1,15 @@
-THE SAIL LOFT — PROPERTY WEBSITE PREVIEW
+THE SAIL LOFT PREVIEW
 
-Upload the contents of this folder into:
-preview.getmyvideo.co.uk/sailloft/website/
+Upload this folder as:
+preview.getmyvideo.co.uk/sailloft/
 
-Includes:
-- index.html
-- styles.css
-- assets/ (photos + clean hero loop + full property film with music)
+Included:
+- index.html — personalised GetMyVideo preview page
+- preview.mp4 — Sail Loft cinematic property film
+- poster.jpg — video poster frame
+- website/index.html — temporary website-preview placeholder
 
-The booking button is intentionally a placeholder for the proposal preview.
-When a customer purchases, replace the placeholder with their Airbnb / Booking.com /
-direct booking URL or booking engine.
+Next step:
+Replace the contents of /website/ with the full Sail Loft property website when built.
 
-This website is set to noindex/nofollow because it is currently a private prospect preview.
-Remove that meta tag for a purchased live website.
+Stripe buttons are still placeholders in index.html.
