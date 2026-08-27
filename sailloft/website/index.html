@@ -1,227 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="The Sail Loft — a premium beachfront holiday stay with private beach access, bay views, three bedrooms and a spectacular terrace.">
-  <meta name="robots" content="noindex,nofollow">
-  <title>The Sail Loft — Beachfront Stay</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GetMyVideo turns your existing property photos into premium cinematic property films for Airbnb, holiday lets and estate agents." />
+  <title>GetMyVideo — Cinematic Property Films From Your Photos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar" id="top">
-    <a class="brand" href="#top">
-      <span class="brand-kicker">PORTH BEACH</span>
-      <span class="brand-name">THE SAIL LOFT</span>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="GetMyVideo home">
+      <span class="brand-mark">GMV</span>
+      <span class="brand-word">GETMYVIDEO</span>
     </a>
-    <nav>
-      <a href="#stay">The stay</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#location">Location</a>
-      <a class="book-pill" href="#book">Book your stay</a>
+    <nav class="nav">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#pricing">Get your video</a>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/poster.jpg">
-        <source src="assets/hero-loop.mp4" type="video/mp4">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
+        <source src="assets/hero-property-loop.mp4" type="video/mp4" />
       </video>
-      <div class="hero-shade"></div>
-      <div class="hero-copy">
-        <div class="eyebrow">BEACHFRONT LIVING · CORNWALL</div>
-        <h1>Wake up<br>on the beach.</h1>
-        <p>The Sail Loft is a beautifully designed three-bedroom coastal stay with private beach access, bay views and a terrace that puts the shoreline at your feet.</p>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">CINEMATIC PROPERTY MARKETING</div>
+        <h1>Your property photos.<br><span>Turned into film.</span></h1>
+        <p>Premium cinematic property videos created from the photos you already have — no filming day, no videographer, no disruption.</p>
         <div class="hero-actions">
-          <a class="button gold" href="#book">Check availability</a>
-          <a class="button glass" href="#film">Watch the film</a>
+          <a class="button button-primary" href="#pricing">Get your video from £99</a>
+          <a class="button button-ghost" href="#showcase">Watch example</a>
+        </div>
+        <div class="hero-proof">
+          <span>Airbnb</span><span>Holiday lets</span><span>Estate agents</span><span>Property owners</span>
         </div>
       </div>
-      <div class="hero-stats">
-        <span><strong>3</strong> bedrooms</span>
-        <span><strong>4</strong> beds</span>
-        <span><strong>Beach</strong> access</span>
-        <span><strong>Bay</strong> views</span>
-      </div>
     </section>
 
-    <section class="intro section" id="stay">
-      <div class="intro-title">
-        <div class="eyebrow dark">A FRONT-ROW SEAT TO THE COAST</div>
-        <h2>Sand outside.<br>Comfort inside.</h2>
+    <section class="section intro" id="showcase">
+      <div class="section-heading narrow">
+        <div class="eyebrow dark">FROM STILL PHOTOS TO CINEMATIC VIDEO</div>
+        <h2>Make your listing feel worth more.</h2>
+        <p>We take your existing photography and create smooth, premium property films designed for listings, websites and social media.</p>
       </div>
-      <div class="intro-copy">
-        <p class="lead">Step from the terrace to the beach, then come home to fireside evenings, generous bedrooms and a light-filled kitchen made for long, lazy meals.</p>
-        <p>Designed for families and groups, The Sail Loft brings together the ease of a private home with a location that makes the coast the centre of every stay.</p>
-      </div>
-    </section>
-
-    <section class="statement-image">
-      <img src="assets/beach-terrace.jpg" alt="The Sail Loft terrace overlooking the beach">
-      <div class="statement-copy">
-        <div class="eyebrow">THE TERRACE</div>
-        <h2>Your morning coffee comes with a tide table.</h2>
-        <p>Outdoor dining, sun loungers and uninterrupted views across the bay — with private beach access just steps away.</p>
-      </div>
-    </section>
-
-    <section class="film-section section" id="film">
-      <div class="section-head centered">
-        <div class="eyebrow dark">THE SAIL LOFT FILM</div>
-        <h2>See the stay come to life.</h2>
-        <p>Press play with sound for a cinematic tour of the property.</p>
-      </div>
-      <div class="film-card">
-        <video controls playsinline preload="metadata" poster="assets/poster.jpg">
-          <source src="assets/property-film.mp4" type="video/mp4">
+      <div class="video-card">
+        <video controls playsinline preload="metadata">
+          <source src="assets/sample-property-film.mp4" type="video/mp4" />
         </video>
-      </div>
-    </section>
-
-    <section class="split-section">
-      <div class="split-image"><img src="assets/living-room.jpg" alt="Living room with wood burning fireplace"></div>
-      <div class="split-copy">
-        <div class="eyebrow dark">SPACE TO SWITCH OFF</div>
-        <h2>Coastal days.<br>Fireside nights.</h2>
-        <p>The living room pairs warm timber, exposed brick and a wood-burning stove with views towards the beach — a calm space to come back to after a day by the water.</p>
-        <div class="mini-features">
-          <span>Wood-burning fireplace</span>
-          <span>TV with Roku</span>
-          <span>Bluetooth sound system</span>
-          <span>Books & board games</span>
+        <div class="video-meta">
+          <div>
+            <strong>Sample Property Film</strong>
+            <span>Created entirely from existing listing photography</span>
+          </div>
+          <span class="pill">45–60 sec</span>
         </div>
       </div>
     </section>
 
-    <section class="split-section reverse">
-      <div class="split-image"><img src="assets/kitchen-view.jpg" alt="Kitchen opening to beach terrace"></div>
-      <div class="split-copy">
-        <div class="eyebrow dark">INDOOR / OUTDOOR LIVING</div>
-        <h2>A kitchen that opens straight onto the coast.</h2>
-        <p>A fully equipped kitchen and generous island make breakfast, drinks and shared dinners effortless. Fold back the doors and the terrace becomes part of the room.</p>
-        <div class="mini-features">
-          <span>Full kitchen</span>
-          <span>Induction cooker & oven</span>
-          <span>Large fridge / freezer</span>
-          <span>Outdoor dining & BBQ</span>
-        </div>
+    <section class="section dark-section" id="how">
+      <div class="section-heading light">
+        <div class="eyebrow">SIMPLE BY DESIGN</div>
+        <h2>Three steps. No filming required.</h2>
       </div>
-    </section>
-
-    <section class="sleep section">
-      <div class="section-head">
-        <div class="eyebrow dark">WHERE YOU'LL SLEEP</div>
-        <h2>Three bedrooms.<br>Room to unwind.</h2>
-      </div>
-      <div class="sleep-grid">
-        <article class="sleep-card hero-room">
-          <img src="assets/master-bedroom.jpg" alt="Principal bedroom with bath and bay views">
-          <div class="sleep-overlay">
-            <span>Bedroom one</span>
-            <h3>King bed · bay views</h3>
-            <p>A spacious principal bedroom with freestanding bath and a calm coastal palette.</p>
-          </div>
+      <div class="steps">
+        <article class="step-card">
+          <span>01</span>
+          <h3>Send your photos</h3>
+          <p>Share the images you already use on Airbnb, Booking.com, Rightmove or your own website.</p>
         </article>
-        <article class="sleep-card">
-          <img src="assets/bedroom.jpg" alt="King bedroom opening toward the beach">
-          <div class="sleep-overlay">
-            <span>Bedroom three</span>
-            <h3>King bed</h3>
-            <p>Bright, peaceful and positioned to make the most of the setting.</p>
-          </div>
+        <article class="step-card">
+          <span>02</span>
+          <h3>We create the film</h3>
+          <p>We select the strongest shots, build cinematic movement, add premium music, titles and your call to action.</p>
         </article>
-        <article class="sleep-card">
-          <img src="assets/twin-bedroom.jpg" alt="Twin bedroom with two single beds and beach view">
-          <div class="sleep-overlay">
-            <span>Bedroom two</span>
-            <h3>Two single beds · beach view</h3>
-            <p>A bright twin room with two single beds and a beautiful view towards the beach.</p>
-          </div>
+        <article class="step-card">
+          <span>03</span>
+          <h3>Receive ready-to-use video</h3>
+          <p>Get polished landscape and social-ready versions, ready to publish across your marketing.</p>
         </article>
       </div>
     </section>
 
-    <section class="gallery section" id="gallery">
-      <div class="section-head centered">
-        <div class="eyebrow dark">GALLERY</div>
-        <h2>A closer look.</h2>
+    <section class="section" id="pricing">
+      <div class="section-heading narrow">
+        <div class="eyebrow dark">STRAIGHTFORWARD PRICING</div>
+        <h2>Choose your package.</h2>
+        <p>No filming fees. No crew. No complicated quote.</p>
       </div>
-      <div class="masonry">
-        <img src="assets/terrace.jpg" alt="Terrace and kitchen">
-        <img src="assets/exterior.jpg" alt="Exterior of The Sail Loft">
-        <img src="assets/kitchen.jpg" alt="Kitchen">
-        <img src="assets/kitchen-view.jpg" alt="Kitchen and terrace">
-        <img src="assets/master-bedroom.jpg" alt="Principal bedroom">
-        <img src="assets/twin-bedroom.jpg" alt="Twin bedroom with two single beds and beach view">
-        <img src="assets/living-room.jpg" alt="Living room">
-        <img src="assets/beach-terrace.jpg" alt="Beach terrace">
-        <img src="assets/bedroom.jpg" alt="Bedroom">
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div class="price-top">
+            <div>
+              <span class="plan-label">PROPERTY FILM</span>
+              <h3>Premium Video</h3>
+            </div>
+            <div class="price">£99</div>
+          </div>
+          <ul>
+            <li>45–60 second cinematic property film</li>
+            <li>Created from your existing photos</li>
+            <li>Premium instrumental music</li>
+            <li>Property name, location & key features</li>
+            <li>16:9 HD master</li>
+            <li>9:16 social-ready version</li>
+          </ul>
+          <a class="button button-dark stripe-placeholder" href="https://buy.stripe.com/bJebJ2bcY2V539HcjIf3a07">Get the £99 video</a>
+        </article>
+
+        <article class="price-card featured">
+          <div class="popular">MOST POPULAR</div>
+          <div class="price-top">
+            <div>
+              <span class="plan-label">SOCIAL LAUNCH</span>
+              <h3>Video + Social</h3>
+            </div>
+            <div class="price">£149</div>
+          </div>
+          <ul>
+            <li>Everything in Premium Video</li>
+            <li>Social-first edit for Reels/TikTok</li>
+            <li>Ready-to-post caption</li>
+            <li>Property-specific hook & CTA</li>
+            <li>Social cover/thumbnail</li>
+            <li>Hashtags & posting copy</li>
+          </ul>
+          <a class="button button-primary stripe-placeholder" href="https://buy.stripe.com/5kQ9AU6WIanxdOl2J8f3a08">Get the £149 package</a>
+        </article>
+
+        <article class="price-card website-card">
+          <div class="premium-badge">FULL PROPERTY PACKAGE</div>
+          <div class="price-top">
+            <div>
+              <span class="plan-label">PROPERTY WEBSITE + FILM</span>
+              <h3>Your Own Property Website</h3>
+            </div>
+            <div class="price">£349</div>
+          </div>
+          <p class="plan-intro">Turn your listing into a premium standalone property brand with your cinematic film built directly into the website.</p>
+          <ul>
+            <li>Everything in Premium Video</li>
+            <li>Luxury single-property website</li>
+            <li>Cinematic video embedded in the hero</li>
+            <li>Mobile-first design & gallery</li>
+            <li>Amenities, location & local-area sections</li>
+            <li>Reviews, enquiry & booking CTA</li>
+            <li>Basic on-page SEO</li>
+            <li>Domain name included</li>
+            <li>12 months hosting included</li>
+            <li>Renewal from £79/year after year one</li>
+          </ul>
+          <a class="button button-dark stripe-placeholder" href="https://buy.stripe.com/aFabJ2ftecvF25DbfEf3a09">Get the £349 package</a>
+        </article>
+      </div>
+      <p class="checkout-note">Secure checkout powered by Stripe.</p>
+    </section>
+
+    <section class="section use-cases">
+      <div class="section-heading light">
+        <div class="eyebrow">BUILT FOR PROPERTY</div>
+        <h2>One video. More places to sell the stay.</h2>
+      </div>
+      <div class="use-grid">
+        <div class="use"><strong>Airbnb & holiday lets</strong><span>Make listings and social content feel more premium.</span></div>
+        <div class="use"><strong>Estate agents</strong><span>Give listings cinematic movement without arranging a shoot.</span></div>
+        <div class="use"><strong>Property websites</strong><span>Turn your homepage hero into a premium first impression.</span></div>
+        <div class="use"><strong>Social media</strong><span>Get content designed for Instagram, Facebook and TikTok.</span></div>
       </div>
     </section>
 
-    <section class="amenities section" id="amenities">
-      <div class="section-head">
-        <div class="eyebrow dark">EVERYTHING YOU NEED</div>
-        <h2>The essentials — and the little extras.</h2>
+    <section class="section faq" id="faq">
+      <div class="section-heading narrow">
+        <div class="eyebrow dark">FAQ</div>
+        <h2>Everything you need to know.</h2>
       </div>
-      <div class="amenity-grid">
-        <div><b>Beach & outdoors</b><span>Private beach access</span><span>Bay / waterfront views</span><span>Private patio or balcony</span><span>Fenced garden</span><span>Outdoor dining</span><span>BBQ & beach essentials</span></div>
-        <div><b>Inside</b><span>Wi-Fi</span><span>Wood-burning fireplace</span><span>Central heating</span><span>TV with Roku</span><span>Bluetooth sound system</span><span>Washer & dryer</span></div>
-        <div><b>Family friendly</b><span>Cot</span><span>High chair</span><span>Children's tableware</span><span>Board games</span><span>Fireplace guards</span><span>Baby safety gates</span></div>
-        <div><b>Practical</b><span>Free parking — 1 space</span><span>Free on-street parking</span><span>Self check-in</span><span>Lockbox</span><span>Single-level home</span><span>Long stays allowed</span></div>
-      </div>
+      <details open>
+        <summary>Do you need to visit the property?</summary>
+        <p>No. We work from the high-quality photos you already have, so there is no filming day or disruption.</p>
+      </details>
+      <details>
+        <summary>Can you use Airbnb listing photos?</summary>
+        <p>Yes, provided you own the photos or have permission to use them for marketing.</p>
+      </details>
+      <details>
+        <summary>Will the property still look like the real property?</summary>
+        <p>That is the priority. We use restrained cinematic movement and quality control to preserve the architecture, furnishings and overall look of the original images.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Checkout will be handled securely through Stripe. Once your payment links are connected, each package button will open Stripe Checkout.</p>
+      </details>
     </section>
 
-    <section class="location" id="location">
-      <img src="assets/exterior.jpg" alt="The Sail Loft beside the beach">
-      <div class="location-copy">
-        <div class="eyebrow">THE LOCATION</div>
-        <h2>Stay where the beach begins.</h2>
-        <p>The Sail Loft sits directly beside the sand at Porth Beach, Newquay — giving guests a rare beachfront base for coastal walks, beach days and Cornwall escapes.</p>
-        <div class="location-points">
-          <span>Beachfront setting</span>
-          <span>Private beach access</span>
-          <span>Newquay, Cornwall</span>
-        </div>
+    <section class="final-cta">
+      <div>
+        <div class="eyebrow">READY WHEN YOUR PHOTOS ARE</div>
+        <h2>Turn your listing into a film.</h2>
+        <p>Premium property video from £99.</p>
       </div>
-    </section>
-
-    <section class="book section" id="book">
-      <div class="book-copy">
-        <div class="eyebrow dark">READY FOR THE COAST?</div>
-        <h2>Book your stay at The Sail Loft.</h2>
-        <p>Use the booking button below to check dates and availability. For the live site, this can link directly to Airbnb, Booking.com or your own direct-booking system.</p>
-      </div>
-      <div class="book-panel">
-        <span class="small">THE SAIL LOFT</span>
-        <h3>Beachfront stay · Porth Beach</h3>
-        <p>3 bedrooms · 4 beds · private beach access</p>
-        <a class="button gold wide" href="#" onclick="return false;">Check availability</a>
-        <small>Booking link placeholder for preview</small>
-      </div>
+      <a class="button button-primary" href="#pricing">Choose your package</a>
     </section>
   </main>
 
   <footer>
-    <div>
-      <span class="brand-kicker">PORTH BEACH · CORNWALL</span>
-      <strong>THE SAIL LOFT</strong>
-    </div>
-    <div class="footer-links">
-      <a href="#stay">The stay</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#book">Book</a>
-    </div>
-    <span class="preview-note">Website concept by GetMyVideo</span>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">GMV</span><span class="brand-word">GETMYVIDEO</span></a>
+    <p>© <span id="year"></span> GetMyVideo.co.uk</p>
   </footer>
 
-  <div class="mobile-book">
-    <a href="#book">Book your stay</a>
+  <div class="modal" id="stripeModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <span class="plan-label">STRIPE PLACEHOLDER</span>
+      <h3 id="modalTitle">Checkout coming next</h3>
+      <p id="modalPackage"></p>
+      <p>Replace the placeholder link in <code>script.js</code> with your Stripe Payment Link and this button will send customers straight to secure Stripe Checkout.</p>
+      <button class="button button-dark" data-close>Close</button>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
