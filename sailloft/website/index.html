@@ -1,208 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex,nofollow" />
-  <title>The Sail Loft — Your GetMyVideo Preview</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Sail Loft — a premium beachfront holiday stay with private beach access, bay views, three bedrooms and a spectacular terrace.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>The Sail Loft — Beachfront Stay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --ink:#101316;
-      --charcoal:#171b1f;
-      --paper:#f5f2eb;
-      --white:#fff;
-      --muted:#6f7478;
-      --gold:#c8a86b;
-      --line:rgba(16,19,22,.12);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
-    header{padding:22px 0;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.12em;font-size:.9rem}
-    .brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(16,19,22,.35);border-radius:50%;font-size:.7rem}
-    .tiny{font-size:.8rem;color:var(--muted)}
-    .hero{padding:46px 0 24px;text-align:center}
-    .eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.2em;color:#8b6c35;margin-bottom:16px}
-    h1,h2,h3{font-family:'Playfair Display',serif;letter-spacing:-.03em}
-    h1{font-size:clamp(2.8rem,7vw,6rem);line-height:1;margin:0 0 16px}
-    .hero p{max-width:720px;margin:0 auto;color:var(--muted);font-size:1.05rem}
-    .video-shell{margin:34px auto 64px;max-width:1100px;background:#0d1013;border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(20,18,14,.18)}
-    video{display:block;width:100%;aspect-ratio:16/9;background:#000}
-    .video-meta{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 22px;color:#fff}
-    .video-meta div{display:flex;flex-direction:column;align-items:flex-start}
-    .video-meta span{color:#aaa;font-size:.9rem}
-    .pill{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 11px;color:#ddd!important;white-space:nowrap}
-    .website-preview{background:var(--charcoal);color:#fff;padding:72px 0}
-    .website-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
-    .website-preview h2{font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.02;margin:0 0 18px}
-    .website-preview p{color:rgba(255,255,255,.68);font-size:1.04rem;max-width:620px}
-    .mock-browser{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 28px 70px rgba(0,0,0,.32)}
-    .browser-bar{height:42px;background:#efefef;display:flex;align-items:center;padding:0 14px;gap:7px}
-    .dot{width:9px;height:9px;border-radius:50%;background:#bbb}
-    .site-shot{aspect-ratio:16/10;background:linear-gradient(135deg,#d9cfbb,#8c7760);display:grid;place-items:center;color:#fff;text-align:center;padding:28px}
-    .site-shot strong{font-family:'Playfair Display',serif;font-size:2rem}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-weight:800;border:0;cursor:pointer}
-    .btn-gold{background:var(--gold);color:#111}
-    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}
-    .pricing{padding:82px 0}
-    .pricing h2{text-align:center;font-size:clamp(2.3rem,5vw,4.5rem);margin:0 0 12px}
-    .pricing>p{text-align:center;color:var(--muted);margin-bottom:42px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
-    .card.best{border:2px solid var(--gold);background:linear-gradient(180deg,#fff,#fbf7ef)}
-    .badge{position:absolute;right:20px;top:-12px;background:var(--gold);color:#111;border-radius:999px;padding:7px 10px;font-size:.66rem;font-weight:800;letter-spacing:.11em}
-    .plan{font-size:.68rem;font-weight:800;letter-spacing:.15em;color:#9a7942}
-    .price{font-family:'Playfair Display',serif;font-size:3rem;margin:8px 0 20px}
-    ul{padding-left:20px;color:#444;min-height:190px}
-    li{margin:8px 0}
-    .card .btn{width:100%;background:var(--ink);color:#fff}
-    .card.best .btn{background:var(--gold);color:#111}
-    .note{text-align:center;color:var(--muted);font-size:.86rem;margin-top:22px}
-    footer{background:#0a0d0f;color:#fff;padding:28px 0}
-    footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
-    @media(max-width:850px){
-      .website-grid,.grid{grid-template-columns:1fr}
-      .website-grid{gap:28px}
-      ul{min-height:auto}
-    }
-    @media(max-width:600px){
-      .wrap{width:min(100% - 24px,1180px)}
-      .hero{padding-top:26px}
-      .video-shell{border-radius:16px;margin-bottom:46px}
-      .video-meta{align-items:flex-start}
-      .pill{display:none}
-      .website-preview{padding:54px 0}
-      .actions .btn{width:100%}
-      .pricing{padding:58px 0}
-      footer .wrap{flex-direction:column;align-items:flex-start}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="wrap">
-    <a class="brand" href="https://getmyvideo.co.uk">
-      <span class="brand-mark">GMV</span>
-      <span>GETMYVIDEO</span>
+  <header class="topbar" id="top">
+    <a class="brand" href="#top">
+      <span class="brand-kicker">PORTH BEACH</span>
+      <span class="brand-name">THE SAIL LOFT</span>
     </a>
-    <span class="tiny">Private property preview</span>
+    <nav>
+      <a href="#stay">The stay</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#location">Location</a>
+      <a class="book-pill" href="#book">Book your stay</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="eyebrow">CREATED FOR YOUR PROPERTY</div>
-      <h1>The Sail Loft</h1>
-      <p>We created this cinematic property film and website concept for The Sail Loft using the existing listing photography.</p>
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/poster.jpg">
+        <source src="assets/hero-loop.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <div class="eyebrow">BEACHFRONT LIVING · CORNWALL</div>
+        <h1>Wake up<br>on the beach.</h1>
+        <p>The Sail Loft is a beautifully designed three-bedroom coastal stay with private beach access, bay views and a terrace that puts the shoreline at your feet.</p>
+        <div class="hero-actions">
+          <a class="button gold" href="#book">Check availability</a>
+          <a class="button glass" href="#film">Watch the film</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <span><strong>3</strong> bedrooms</span>
+        <span><strong>4</strong> beds</span>
+        <span><strong>Beach</strong> access</span>
+        <span><strong>Bay</strong> views</span>
+      </div>
+    </section>
 
-      <div class="video-shell">
-        <video controls playsinline preload="metadata" poster="poster.jpg">
-          <source src="preview.mp4" type="video/mp4">
+    <section class="intro section" id="stay">
+      <div class="intro-title">
+        <div class="eyebrow dark">A FRONT-ROW SEAT TO THE COAST</div>
+        <h2>Sand outside.<br>Comfort inside.</h2>
+      </div>
+      <div class="intro-copy">
+        <p class="lead">Step from the terrace to the beach, then come home to fireside evenings, generous bedrooms and a light-filled kitchen made for long, lazy meals.</p>
+        <p>Designed for families and groups, The Sail Loft brings together the ease of a private home with a location that makes the coast the centre of every stay.</p>
+      </div>
+    </section>
+
+    <section class="statement-image">
+      <img src="assets/beach-terrace.jpg" alt="The Sail Loft terrace overlooking the beach">
+      <div class="statement-copy">
+        <div class="eyebrow">THE TERRACE</div>
+        <h2>Your morning coffee comes with a tide table.</h2>
+        <p>Outdoor dining, sun loungers and uninterrupted views across the bay — with private beach access just steps away.</p>
+      </div>
+    </section>
+
+    <section class="film-section section" id="film">
+      <div class="section-head centered">
+        <div class="eyebrow dark">THE SAIL LOFT FILM</div>
+        <h2>See the stay come to life.</h2>
+        <p>Press play with sound for a cinematic tour of the property.</p>
+      </div>
+      <div class="film-card">
+        <video controls playsinline preload="metadata" poster="assets/poster.jpg">
+          <source src="assets/property-film.mp4" type="video/mp4">
         </video>
-        <div class="video-meta">
-          <div>
-            <strong>Your cinematic property preview</strong>
-            <span>Created from your existing property photos</span>
-          </div>
-          <span class="pill">HD PREVIEW</span>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div class="split-image"><img src="assets/living-room.jpg" alt="Living room with wood burning fireplace"></div>
+      <div class="split-copy">
+        <div class="eyebrow dark">SPACE TO SWITCH OFF</div>
+        <h2>Coastal days.<br>Fireside nights.</h2>
+        <p>The living room pairs warm timber, exposed brick and a wood-burning stove with views towards the beach — a calm space to come back to after a day by the water.</p>
+        <div class="mini-features">
+          <span>Wood-burning fireplace</span>
+          <span>TV with Roku</span>
+          <span>Bluetooth sound system</span>
+          <span>Books & board games</span>
         </div>
       </div>
     </section>
 
-    <section class="website-preview">
-      <div class="wrap website-grid">
-        <div>
-          <div class="eyebrow">WE ALSO DESIGNED THIS FOR YOU</div>
-          <h2>See your property with its own website.</h2>
-          <p>We’re creating a full website concept for The Sail Loft — designed to give the property a premium standalone presence and somewhere to send guests from social media and direct marketing.</p>
-          <div class="actions">
-            <!-- CHANGE THIS LINK FOR EACH PROPERTY -->
-            <a class="btn btn-gold" href="website/" target="_blank" rel="noopener">View Your Full Website Preview</a>
-            <a class="btn btn-outline" href="#packages">See Packages</a>
-          </div>
+    <section class="split-section reverse">
+      <div class="split-image"><img src="assets/kitchen-view.jpg" alt="Kitchen opening to beach terrace"></div>
+      <div class="split-copy">
+        <div class="eyebrow dark">INDOOR / OUTDOOR LIVING</div>
+        <h2>A kitchen that opens straight onto the coast.</h2>
+        <p>A fully equipped kitchen and generous island make breakfast, drinks and shared dinners effortless. Fold back the doors and the terrace becomes part of the room.</p>
+        <div class="mini-features">
+          <span>Full kitchen</span>
+          <span>Induction cooker & oven</span>
+          <span>Large fridge / freezer</span>
+          <span>Outdoor dining & BBQ</span>
         </div>
-
-        <a class="mock-browser" href="website/" target="_blank" rel="noopener" aria-label="Open full website preview">
-          <div class="browser-bar">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          </div>
-          <!-- Replace this area with a real screenshot later if you want -->
-          <div class="site-shot">
-            <div>
-              <span class="tiny" style="color:rgba(255,255,255,.78)">PROPERTY WEBSITE CONCEPT</span><br>
-              <strong>The Sail Loft</strong><br>
-              <span>Click to explore the full website</span>
-            </div>
-          </div>
-        </a>
       </div>
     </section>
 
-    <section class="pricing wrap" id="packages">
-      <h2>Choose your package.</h2>
-      <p>If you like what we've created, choose the option that works best for your property.</p>
-
-      <div class="grid">
-        <article class="card">
-          <span class="plan">PROPERTY FILM</span>
-          <div class="price">£99</div>
-          <ul>
-            <li>Cinematic property film</li>
-            <li>16:9 HD master</li>
-            <li>9:16 social-ready version</li>
-            <li>Premium music and titles</li>
-          </ul>
-          <!-- REPLACE # WITH STRIPE LINK -->
-          <a class="btn" href="#">Get the £99 Video</a>
+    <section class="sleep section">
+      <div class="section-head">
+        <div class="eyebrow dark">WHERE YOU'LL SLEEP</div>
+        <h2>Three bedrooms.<br>Room to unwind.</h2>
+      </div>
+      <div class="sleep-grid">
+        <article class="sleep-card hero-room">
+          <img src="assets/master-bedroom.jpg" alt="Principal bedroom with bath and bay views">
+          <div class="sleep-overlay">
+            <span>Bedroom one</span>
+            <h3>King bed · bay views</h3>
+            <p>A spacious principal bedroom with freestanding bath and a calm coastal palette.</p>
+          </div>
         </article>
-
-        <article class="card">
-          <span class="plan">SOCIAL LAUNCH</span>
-          <div class="price">£149</div>
-          <ul>
-            <li>Everything in the £99 package</li>
-            <li>Social-first edit</li>
-            <li>Ready-to-post caption</li>
-            <li>Hook, CTA and hashtags</li>
-          </ul>
-          <!-- REPLACE # WITH STRIPE LINK -->
-          <a class="btn" href="#">Get Video + Social</a>
+        <article class="sleep-card">
+          <img src="assets/bedroom.jpg" alt="King bedroom opening toward the beach">
+          <div class="sleep-overlay">
+            <span>Bedroom three</span>
+            <h3>King bed</h3>
+            <p>Bright, peaceful and positioned to make the most of the setting.</p>
+          </div>
         </article>
-
-        <article class="card best">
-          <div class="badge">BEST VALUE</div>
-          <span class="plan">COMPLETE PROPERTY PACKAGE</span>
-          <div class="price">£349</div>
-          <ul>
-            <li>Cinematic property film included</li>
-            <li>Your own luxury property website</li>
-            <li>Domain name included</li>
-            <li>12 months hosting included</li>
-            <li>Mobile-first design</li>
-            <li>Booking / enquiry CTA</li>
-          </ul>
-          <!-- REPLACE # WITH STRIPE LINK -->
-          <a class="btn" href="#">Get the £349 Package</a>
+        <article class="sleep-card">
+          <img src="assets/twin-bedroom.jpg" alt="Twin bedroom with two single beds and beach view">
+          <div class="sleep-overlay">
+            <span>Bedroom two</span>
+            <h3>Two single beds · beach view</h3>
+            <p>A bright twin room with two single beds and a beautiful view towards the beach.</p>
+          </div>
         </article>
       </div>
+    </section>
 
-      <p class="note">Secure checkout via Stripe. Preview pages are private and not indexed by search engines.</p>
+    <section class="gallery section" id="gallery">
+      <div class="section-head centered">
+        <div class="eyebrow dark">GALLERY</div>
+        <h2>A closer look.</h2>
+      </div>
+      <div class="masonry">
+        <img src="assets/terrace.jpg" alt="Terrace and kitchen">
+        <img src="assets/exterior.jpg" alt="Exterior of The Sail Loft">
+        <img src="assets/kitchen.jpg" alt="Kitchen">
+        <img src="assets/kitchen-view.jpg" alt="Kitchen and terrace">
+        <img src="assets/master-bedroom.jpg" alt="Principal bedroom">
+        <img src="assets/twin-bedroom.jpg" alt="Twin bedroom with two single beds and beach view">
+        <img src="assets/living-room.jpg" alt="Living room">
+        <img src="assets/beach-terrace.jpg" alt="Beach terrace">
+        <img src="assets/bedroom.jpg" alt="Bedroom">
+      </div>
+    </section>
+
+    <section class="amenities section" id="amenities">
+      <div class="section-head">
+        <div class="eyebrow dark">EVERYTHING YOU NEED</div>
+        <h2>The essentials — and the little extras.</h2>
+      </div>
+      <div class="amenity-grid">
+        <div><b>Beach & outdoors</b><span>Private beach access</span><span>Bay / waterfront views</span><span>Private patio or balcony</span><span>Fenced garden</span><span>Outdoor dining</span><span>BBQ & beach essentials</span></div>
+        <div><b>Inside</b><span>Wi-Fi</span><span>Wood-burning fireplace</span><span>Central heating</span><span>TV with Roku</span><span>Bluetooth sound system</span><span>Washer & dryer</span></div>
+        <div><b>Family friendly</b><span>Cot</span><span>High chair</span><span>Children's tableware</span><span>Board games</span><span>Fireplace guards</span><span>Baby safety gates</span></div>
+        <div><b>Practical</b><span>Free parking — 1 space</span><span>Free on-street parking</span><span>Self check-in</span><span>Lockbox</span><span>Single-level home</span><span>Long stays allowed</span></div>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <img src="assets/exterior.jpg" alt="The Sail Loft beside the beach">
+      <div class="location-copy">
+        <div class="eyebrow">THE LOCATION</div>
+        <h2>Stay where the beach begins.</h2>
+        <p>The Sail Loft sits directly beside the sand at Porth Beach, Newquay — giving guests a rare beachfront base for coastal walks, beach days and Cornwall escapes.</p>
+        <div class="location-points">
+          <span>Beachfront setting</span>
+          <span>Private beach access</span>
+          <span>Newquay, Cornwall</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="book section" id="book">
+      <div class="book-copy">
+        <div class="eyebrow dark">READY FOR THE COAST?</div>
+        <h2>Book your stay at The Sail Loft.</h2>
+        <p>Use the booking button below to check dates and availability. For the live site, this can link directly to Airbnb, Booking.com or your own direct-booking system.</p>
+      </div>
+      <div class="book-panel">
+        <span class="small">THE SAIL LOFT</span>
+        <h3>Beachfront stay · Porth Beach</h3>
+        <p>3 bedrooms · 4 beds · private beach access</p>
+        <a class="button gold wide" href="#" onclick="return false;">Check availability</a>
+        <small>Booking link placeholder for preview</small>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <a class="brand" href="https://getmyvideo.co.uk">
-        <span class="brand-mark">GMV</span>
-        <span>GETMYVIDEO</span>
-      </a>
-      <span class="tiny">© GetMyVideo.co.uk</span>
+    <div>
+      <span class="brand-kicker">PORTH BEACH · CORNWALL</span>
+      <strong>THE SAIL LOFT</strong>
     </div>
+    <div class="footer-links">
+      <a href="#stay">The stay</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#book">Book</a>
+    </div>
+    <span class="preview-note">Website concept by GetMyVideo</span>
   </footer>
+
+  <div class="mobile-book">
+    <a href="#book">Book your stay</a>
+  </div>
 </body>
 </html>
