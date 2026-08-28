@@ -1,0 +1,10 @@
+GetMyVideo preview package complete for Golden Meadow
+
+Property slug: golden-meadow
+Preview URL: https://preview.getmyvideo.co.uk/golden-meadow/
+Website URL: https://preview.getmyvideo.co.uk/golden-meadow/website/
+Master video: /Users/home/Desktop/GetMyVideo Autopilot/golden-meadow/output/master_16x9.mp4
+Preview video: preview.mp4
+Social card: social-card.jpg
+
+Verify booking URL and all listing facts before public use.
